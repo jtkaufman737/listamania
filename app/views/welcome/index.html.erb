@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<head>
+  <nav>
+    <%= link_to "ALL LISTS", controller:"lists" %>|
+    <%= link_to "NEW LIST", new_list_path %>
+  </nav>
+</head>
+<body>
+  <center>
+    <div class="container">
+  <div class="col s12">
+    <%= yield %>
+  </div>
+</div>
+    <br/><h3>listamania</h3><br/>
+    <%= image_tag("swirls.png",:alt => "swirls") %><br/>
+    <br/>
+    <div>
+      <p>I am a person admitting that I have a problem. I once caught myself
+      at the grocery store with a shopping list that just read, "Soda, food"
+      I have made an executive decision to move my lists online, and abandon
+      this absurd practice. Enjoy!</p>
+    </div><br/>
+</body>
+</html>

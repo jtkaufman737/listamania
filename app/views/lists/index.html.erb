@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+
+<center><h4>Lists</h4>
+<h6><%= link_to 'NEW LIST', new_list_path %></center></h6>
+<br/><br/>
+  <container>
+    <strong>
+     <div class="flex">TITLE</div>
+     <div class="flex">TEXT</div>
+     <div class="flex"><center>OPTIONS</center></div>
+   </strong>
+   </container>
+  <br/><br/>
+
+
+  <% @lists.each do |list| %>
+    <container>
+      <div class="flex"><%= list.title %></div>
+      <div class="flex"><%= list.text %></div>
+      <div class="flex"><%= link_to 'Show', list_path(list) %>
+    <%= link_to 'Edit', edit_list_path(list) %>
+      <%= link_to 'Destroy', list_path(list),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></div>
+    </container>
+  <% end %><br/><br/>
+</table>
+</body>
+</html>

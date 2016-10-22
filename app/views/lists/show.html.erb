@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+ <br/>
+  <h5>
+    <%= @list.title %>
+  </h5><br/>
+
+   <div id="body">
+    <center><h6>List Items:</h6></center>
+      <%= @list.text %>
+    </div><br/>
+<center><h6>Comments</h6></center>
+  <div id="comment_section">
+  <p>
+    <%= render @list.comments %><p>
+
+    <div id="comment_add"><strong>Add a comment</strong></div><p><br/>
+    <%= render 'comments/form' %><br/>
+    <center>
+      <%= link_to 'Edit', edit_list_path(@list) %> |
+      <%= link_to 'Back', lists_path %>
+    </center>
+  </p>
+</div>
+  <br/>
+</body>
+</html>
